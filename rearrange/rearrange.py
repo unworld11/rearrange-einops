@@ -1,6 +1,6 @@
-from validators import Validator
-from utils import check_extra_arguments, get_additional_args
-from transformations import input_based_transformation, update_input_tokens_mapping, Output_Transformations
+from .validators import Validator
+from .utils import check_extra_arguments, get_additional_args
+from .transformations import input_based_transformation, update_input_tokens_mapping, Output_Transformations
 
 def rearrange(array, pattern, **kwargs):
     """

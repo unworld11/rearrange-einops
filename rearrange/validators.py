@@ -1,4 +1,4 @@
-from utils import to_numpy_array, unexpected_chars_checker, clean_singletons_in_parentheses, _tokenize
+from .utils import to_numpy_array, unexpected_chars_checker, clean_singletons_in_parentheses, _tokenize
 
 class Validator:
     def __init__(self, array, pattern, **kwargs):
@@ -127,7 +127,7 @@ class Validator:
             if tok == '1':
                 if self.array.shape[ind] != 1:
                     raise ValueError(
-                        f"Dimension for token '1' must be 1, but got {self.array_shape[index]} at index {index}."
+                        f"Dimension for token '1' must be 1, but got {self.array.shape[ind]} at index {ind}."
                     )
                 singleton_count += 1
                 input_tokens_mapping["singleton_"+str(singleton_count)] = ind

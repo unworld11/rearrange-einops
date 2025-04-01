@@ -7,9 +7,9 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 # Now import your modules
-from validators import Validator
-from rearrange import rearrange
-from transformations import Output_Transformations
+from rearrange.validators import Validator
+from rearrange.rearrange import rearrange
+from rearrange.transformations import Output_Transformations
 
 class TestValidator(unittest.TestCase):
     def test_valid_pattern(self):
