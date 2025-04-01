@@ -27,6 +27,11 @@ cd sarvam-assignment
 pip install -r requirements.txt
 ```
 
+3. Install the package in development mode:
+```bash
+pip install -e .
+```
+
 ## Usage
 
 The library provides a simple `rearrange` function that takes an array and a pattern string as input. Here are some examples:
@@ -56,6 +61,8 @@ x = np.random.rand(2, 3, 4, 5)
 result = rearrange(x, '... h w -> ... (h w)')
 ```
 
+More examples can be found in the `examples/` directory.
+
 ## Pattern Syntax
 
 The pattern syntax follows these rules:
@@ -75,12 +82,20 @@ python -m pytest tests/
 
 ## Project Structure
 
-- `rearrange.py`: Main implementation of the rearrangement function
-- `transformations.py`: Core transformation logic
-- `validators.py`: Pattern validation and parsing
-- `utils.py`: Utility functions
-- `examples.py`: Usage examples
-- `tests/`: Test suite
+```
+sarvam-assignment/
+├── rearrange/              # Main package directory
+│   ├── __init__.py        # Package initialization
+│   ├── rearrange.py       # Main rearrangement function
+│   ├── transformations.py # Core transformation logic
+│   ├── validators.py      # Pattern validation and parsing
+│   └── utils.py          # Utility functions
+├── examples/              # Example scripts
+│   └── basic_usage.py    # Basic usage examples
+├── tests/                # Test suite
+├── requirements.txt      # Project dependencies
+└── README.md            # Project documentation
+```
 
 ## Dependencies
 
@@ -94,4 +109,8 @@ python -m pytest tests/
 2. **Modular Design**: Split the functionality into separate modules for better maintainability
 3. **Comprehensive Validation**: Implemented thorough pattern validation to catch errors early
 4. **Flexible Support**: Added support for both numpy arrays and PyTorch tensors
+
+## Contributing
+
+Feel free to submit issues and enhancement requests!
 
